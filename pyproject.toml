@@ -1,0 +1,127 @@
+# =============================================================================
+# Build System
+# =============================================================================
+
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+
+# =============================================================================
+# Project Metadata
+# =============================================================================
+
+[project]
+name = "hangman-nn"
+version = "0.1.0"
+description = "A simple Hangman game with a hand implemented neural network for word prediction."
+readme = "README.md"
+requires-python = ">=3.12"
+
+authors = [
+    { name = "Randy Limon Jr" },
+]
+
+license = "MIT"
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    # Runtime dependencies go here.
+]
+
+
+# =============================================================================
+# Optional Dependencies
+# =============================================================================
+
+[project.optional-dependencies]
+
+dev = [
+    "pytest>=8",
+    "pytest-cov>=6",
+    "ruff>=0.12",
+    "pyright>=1.1",
+]
+
+
+# =============================================================================
+# Command-Line Entry Points
+# =============================================================================
+
+# Add this section only if the project provides a CLI.
+#
+# Example:
+#
+# [project.scripts]
+# project-name = "package_name.cli.main:main"
+
+
+# =============================================================================
+# Package Discovery
+# =============================================================================
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+# =============================================================================
+# Pytest
+# =============================================================================
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+]
+
+
+# =============================================================================
+# Ruff
+# =============================================================================
+
+[tool.ruff]
+target-version = "py312"
+line-length = 88
+src = ["src", "tests"]
+
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "F",      # Pyflakes
+    "I",      # import sorting
+    "B",      # flake8-bugbear
+    "UP",     # pyupgrade
+    "SIM",    # simplifications
+]
+
+ignore = []
+
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+
+# =============================================================================
+# Pyright
+# =============================================================================
+
+[tool.pyright]
+include = ["src", "tests"]
+exclude = [
+    "**/__pycache__",
+]
+
+pythonVersion = "3.12"
+typeCheckingMode = "strict"
+
+reportMissingTypeStubs = "warning"
