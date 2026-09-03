@@ -118,7 +118,7 @@ indent-style = "space"
 [tool.pyright]
 include = ["src", "tests"]
 exclude = [
-    "**/__pycache__",
+    "**/__pycache__", "**/node_modules", "**/.*", ".venv",
 ]
 
 extraPaths = ["src"]

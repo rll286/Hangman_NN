@@ -1,5 +1,7 @@
 from hangman_nn.game.rules import (
     normalize_letter,
+    normalize_word,
+    validate_word_length,
 )
 
 
@@ -13,3 +15,35 @@ def test_normalize_letter():
     else:
         raise AssertionError("Expected ValueError for non-alphabetic character")
 
+
+def test_normalize_word():
+    assert normalize_word("Hello") == "hello"
+    assert normalize_word("world") == "world"
+    try:
+        normalize_word("Hello123")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for non-alphabetic characters")
+    try:
+        normalize_word("")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for empty string")
+
+
+def test_validate_word_length():
+    validate_word_length("hello")
+    try:
+        validate_word_length("")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for empty string")
+    try:
+        validate_word_length("hello", maximum=3)
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Expected ValueError for word exceeding maximum length")

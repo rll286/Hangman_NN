@@ -21,7 +21,7 @@ def normalize_letter(letter: str) -> str:
 
 def normalize_word(word: str) -> str:
     """
-    Normalize the word to lowercase and reject any non-alphabetic characters, 
+    Normalize the word to lowercase and reject any non-alphabetic characters,
     empty strings, spaces, or punctuation.
 
     args:
@@ -31,7 +31,7 @@ def normalize_word(word: str) -> str:
         str: the normalized word if valid, otherwise raise a ValueError.
 
     raises:
-        ValueError: If the word is empty, contains spaces, punctuation, or 
+        ValueError: If the word is empty, contains spaces, punctuation, or
         non-alphabetic characters.
     """
     if not word or not word.isalpha():
@@ -43,12 +43,12 @@ def normalize_word(word: str) -> str:
 
 def validate_word_length(word: str, *, maximum: int | None = None) -> None:
     """
-    Require positive word length and reject lengths greater than the maximum if 
+    Require positive word length and reject lengths greater than the maximum if
     specified.
 
     args:
         word (str): The word to validate.
-        maximum (int | None): The maximum allowed length of the word. If None, no 
+        maximum (int | None): The maximum allowed length of the word. If None, no
         maximum is enforced.
 
     raises:

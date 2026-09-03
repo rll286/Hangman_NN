@@ -31,11 +31,11 @@ The project does not currently aim to:
 
 ### Implemented
 
-- Rules for loss, input, and valid words
+- Rules for loss, input, and valid word inputs
 
 ### Planned
 
-- Game engine with input normalization
+- Game engine
 - Game state object with only exposed data that a real player would know
 
 ## Requirements
