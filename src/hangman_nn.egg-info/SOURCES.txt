@@ -1,7 +1,0 @@
-README.md
-pyproject.toml
-src/hangman_nn.egg-info/PKG-INFO
-src/hangman_nn.egg-info/SOURCES.txt
-src/hangman_nn.egg-info/dependency_links.txt
-src/hangman_nn.egg-info/requires.txt
-src/hangman_nn.egg-info/top_level.txt
