@@ -118,8 +118,10 @@ indent-style = "space"
 [tool.pyright]
 include = ["src", "tests"]
 exclude = [
-    "**/__pycache__", "**/node_modules", "**/.*", ".venv",
+    "**/__pycache__",
 ]
+
+extraPaths = ["src"]
 
 pythonVersion = "3.12"
 typeCheckingMode = "strict"

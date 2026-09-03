@@ -31,11 +31,12 @@ The project does not currently aim to:
 
 ### Implemented
 
-- None :(
+- Rules for loss, input, and valid words
 
 ### Planned
 
-- Many (will update with future implementation for next version)
+- Game engine with input normalization
+- Game state object with only exposed data that a real player would know
 
 ## Requirements
 
@@ -46,5 +47,5 @@ The project does not currently aim to:
 Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd project-name
+git clone https://github.com/rll286/Hangman_NN.git
+cd Hangman_NN
