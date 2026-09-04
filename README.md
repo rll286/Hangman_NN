@@ -32,11 +32,11 @@ The project does not currently aim to:
 ### Implemented
 
 - Rules for loss, input, and valid word inputs
+- Game state objece with only exposed date that a real player would know
 
 ### Planned
 
 - Game engine
-- Game state object with only exposed data that a real player would know
 
 ## Requirements
 

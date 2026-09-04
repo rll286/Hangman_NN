@@ -34,15 +34,15 @@ def test_normalize_word():
 
 
 def test_validate_word_length():
-    validate_word_length("hello")
+    validate_word_length(3)
     try:
-        validate_word_length("")
+        validate_word_length(0)
     except ValueError:
         pass
     else:
-        raise AssertionError("Expected ValueError for empty string")
+        raise AssertionError("Expected ValueError for non-positive word length")
     try:
-        validate_word_length("hello", maximum=3)
+        validate_word_length(5, maximum=3)
     except ValueError:
         pass
     else:

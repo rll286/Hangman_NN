@@ -41,20 +41,20 @@ def normalize_word(word: str) -> str:
     return word.lower()
 
 
-def validate_word_length(word: str, *, maximum: int | None = None) -> None:
+def validate_word_length(word_length: int, *, maximum: int | None = None) -> None:
     """
     Require positive word length and reject lengths greater than the maximum if
     specified.
 
     args:
-        word (str): The word to validate.
+        word_length (int): The length of the word to validate.
         maximum (int | None): The maximum allowed length of the word. If None, no
         maximum is enforced.
 
     raises:
         ValueError: If the word length is not positive or exceeds the maximum length.
     """
-    if len(word) <= 0:
+    if word_length <= 0:
         raise ValueError("Word length must be positive.")
-    if maximum is not None and len(word) > maximum:
+    if maximum is not None and word_length > maximum:
         raise ValueError(f"Word length must not exceed {maximum} characters.")
